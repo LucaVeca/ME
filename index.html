@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html class="all">
 <head class="line">
 	<meta charset="utf-8">
 	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	
+	<link  type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="main.css">
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="main.js"></script>
-</div>
+	</div>
 	<title></title>
 	<div id="accordion">
   		<h3><div class="mobile-nav">
@@ -18,17 +17,48 @@
     	<span></span>
     </div></h3>
 	<div>
-	<div id="cf">
-  		<img class="bottom" src="Images/Gibson.jpg" height="250px" width="440px"  />
-  		<img class="top" src="Images/Gibson2.jpg" height="250px" width="440px" />
+	<a class="btn-slice" href="#">LUCA VECA</a>
+	
 	</div>
-	<div id="cf">
-  		<img class="bottom" src="Images/juve.jpg" height="250px" width="440px" />
-  		<img class="top" src="Images/512x.jpg" height="250px" width="440px" />
-	</div>
-	<h1 id="text">LUCA VECA<p>SOCCER<p>GUITAR</h1>
-	</div>
+</div>	
 </head>
 <body>
 	
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="Images/512x.jpg" alt="Italia">
+      
+    </div>
+    <div class="item">
+      <img src="Images/juve.jpg" alt="Juventus">
+      
+    </div>
+    
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" href="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
 </body>
+
+</html>
+	
+	

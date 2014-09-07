@@ -7,6 +7,10 @@ body {
   font-family: 'Oswald', sans-serif;
 }
 
+.all{
+  text-align: center;
+}
+
 .box-shadow-menu {
   position: relative;
   padding-left: 1.25em;
@@ -27,6 +31,7 @@ body {
 
 #text{
 	text-align: center;
+  border: 5px black solid;
 }
 
 
@@ -38,6 +43,7 @@ body {
     margin: 8px 0;
     background: rgb(0,0,0);
     z-index: 99;
+    padding-right: 2%;
 }
  
  #hamburger {
@@ -66,10 +72,7 @@ body {
     display: block !important; 
 }
 
-  #image{
-    text-align: right;
-    padding-left: 200px;
-  }
+ 
 
 #cf {
   position:relative;
@@ -97,3 +100,318 @@ body {
 .line{
   display: inline;
 }
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:700);
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+ 
+  text-align: center;
+}
+
+.btn-slice {
+  position: relative;
+  display: inline-block;
+  padding: 0 2rem;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  color: tomato;
+  background-color: transparent;
+  border: 5px solid tomato;
+}
+.btn-slice:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 0;
+  background-color: tomato;
+  -webkit-transition: width .5s, left .5s;
+  transition: width .5s, left .5s;
+}
+.btn-slice:hover {
+  color: white;
+}
+.btn-slice:hover:after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transition: width .5s, left .5s;
+  transition: width .5s, left .5s;
+}
+
+@supports (-webkit-background-clip: text) {
+  .btn-slice {
+    background-color: tomato;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white));
+    background-image: -webkit-linear-gradient(white, white);
+    background-image: linear-gradient(white, white);
+    background-repeat: no-repeat;
+    -webkit-background-size: 0% 100%;
+    background-size: 0% 100%;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-transition: background-size .5s;
+    transition: background-size .5s;
+  }
+  .btn-slice:hover {
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+  }
+}
+
+
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:700);
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  overflow-x: hidden;
+  padding: 3px, 0px, 3px, 0px;
+}
+
+.btn-edge {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 3rem;
+  color: #333;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#333)), -webkit-gradient(linear, left top, left bottom, from(#333), to(#333)), -webkit-gradient(linear, left top, left bottom, from(#333), to(#333)), -webkit-gradient(linear, left top, left bottom, from(#333), to(#333)), -webkit-gradient(linear, left top, left bottom, from(#333), to(#333)), -webkit-gradient(linear, left top, left bottom, from(#333), to(#333)), -webkit-gradient(linear, left top, left bottom, from(#333), to(#333)), -webkit-gradient(linear, left top, left bottom, from(#333), to(#333));
+  background-image: -webkit-linear-gradient(#333, #333), -webkit-linear-gradient(#333, #333), -webkit-linear-gradient(#333, #333), -webkit-linear-gradient(#333, #333), -webkit-linear-gradient(#333, #333), -webkit-linear-gradient(#333, #333), -webkit-linear-gradient(#333, #333), -webkit-linear-gradient(#333, #333);
+  background-image: linear-gradient(#333, #333), linear-gradient(#333, #333), linear-gradient(#333, #333), linear-gradient(#333, #333), linear-gradient(#333, #333), linear-gradient(#333, #333), linear-gradient(#333, #333), linear-gradient(#333, #333);
+  background-repeat: no-repeat;
+  -webkit-background-size: 2rem 5px, 2rem 5px, 2rem 5px, 2rem 5px, 5px 2rem, 5px 2rem, 5px 2rem, 5px 2rem;
+  background-size: 2rem 5px, 2rem 5px, 2rem 5px, 2rem 5px, 5px 2rem, 5px 2rem, 5px 2rem, 5px 2rem;
+  background-position: 0 0, 100% 0, 0 100%, 100% 100%;
+  -webkit-box-shadow: inset 0 0 0 5px rgba(255, 99, 71, 0);
+  box-shadow: inset 0 0 0 5px rgba(255, 99, 71, 0);
+  -webkit-transition: background-size 1s .4s,  -webkit-box-shadow .4s,  color .4s;
+  transition: background-size 1s .4s,  box-shadow .4s,  color .4s;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.btn-edge:hover {
+  color: tomato;
+  -webkit-background-size: 100% 5px, 100% 5px, 100% 5px, 100% 5px, 5px 100%, 5px 100%, 5px 100%, 5px 100%;
+  background-size: 100% 5px, 100% 5px, 100% 5px, 100% 5px, 5px 100%, 5px 100%, 5px 100%, 5px 100%;
+  -webkit-box-shadow: inset 0 0 0 5px tomato;
+  box-shadow: inset 0 0 0 5px tomato;
+  -webkit-transition: background-size 1s,  -webkit-box-shadow .4s .6s,  color .4s .6s;
+  transition: background-size 1s,  box-shadow .4s .6s,  color .4s .6s;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:700);
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  
+  text-align: center;
+}
+
+.btn-loop {
+  position: relative;
+  display: inline-block;
+  padding: 0 1rem;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 3rem;
+  color: transparent;
+  border: 5px solid tomato;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(tomato), to(tomato));
+  background-image: -webkit-linear-gradient(tomato, tomato);
+  background-image: linear-gradient(tomato, tomato);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  -webkit-background-size: 100% 0;
+  background-size: 100% 0;
+  -webkit-transition: background-size .1s;
+  transition: background-size .1s;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.btn-loop:after {
+  content: attr(name);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: tomato;
+}
+.btn-loop:hover {
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.btn-loop:hover:after {
+  -webkit-animation: loop 1s forwards;
+  animation: loop 1s forwards;
+  color: white;
+  -webkit-transition: color .35s .65s;
+  transition: color .35s .65s;
+}
+
+@supports (-webkit-background-clip: text) {
+  .btn-loop:after {
+    content: attr(name);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: tomato;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white));
+    background-image: -webkit-linear-gradient(white, white);
+    background-image: linear-gradient(white, white);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    -webkit-background-size: 100% 0;
+    background-size: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .btn-loop:hover {
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+  }
+  .btn-loop:hover:after {
+    -webkit-animation: loop .7s forwards;
+    animation: loop .7s forwards;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    -webkit-transition: background-size .25s .45s;
+    transition: background-size .25s .45s;
+  }
+}
+@-webkit-keyframes loop {
+  0% {
+    -webkit-transform: translateY(0) rotate(0);
+    transform: translateY(0) rotate(0);
+  }
+  30% {
+    -webkit-transform: translateY(-600%) rotate(330deg);
+    transform: translateY(-600%) rotate(330deg);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(360deg);
+    transform: translateY(0) rotate(360deg);
+  }
+}
+@keyframes loop {
+  0% {
+    -webkit-transform: translateY(0) rotate(0);
+    transform: translateY(0) rotate(0);
+  }
+  30% {
+    -webkit-transform: translateY(-600%) rotate(330deg);
+    transform: translateY(-600%) rotate(330deg);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(360deg);
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:700);
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+
+}
+
+.btn-line {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 3rem;
+  color: #333;
+  -webkit-box-shadow: inset 0 0 0 5px #333;
+  box-shadow: inset 0 0 0 5px #333;
+  -webkit-transition: color 1s .2s;
+  transition: color 1s .2s;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.btn-line:before, .btn-line:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.btn-line:before {
+  right: 0;
+  top: 0;
+  border-top: 5px solid tomato;
+  border-left: 5px solid tomato;
+  -webkit-transition: opacity 0 .4s, width .2s .2s, height .2s;
+  transition: opacity 0 .4s, width .2s .2s, height .2s;
+}
+.btn-line:after {
+  left: 0;
+  bottom: 0;
+  border-bottom: 5px solid tomato;
+  border-right: 5px solid tomato;
+  -webkit-transition: opacity .05s .7s, width .2s .6s, height .2s .4s;
+  transition: opacity .05s .7s, width .2s .6s, height .2s .4s;
+}
+.btn-line:hover {
+  color: tomato;
+  -webkit-transition: color .2s .8s;
+  transition: color .2s .8s;
+}
+.btn-line:hover:before, .btn-line:hover:after {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
+.btn-line:hover:before {
+  -webkit-transition: opacity 0 .4s, width .2s .4s, height .2s .6s;
+  transition: opacity 0 .4s, width .2s .4s, height .2s .6s;
+}
+.btn-line:hover:after {
+  -webkit-transition: opacity 0.05s, width .2s, height .2s .2s;
+  transition: opacity 0.05s, width .2s, height .2s .2s;
+}
+
