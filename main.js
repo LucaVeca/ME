@@ -102,3 +102,108 @@ $( ".btn-loop" ).attr("name", txt);
 
 })(jQuery);
 
+function scrollFooter(scrollY, heightFooter)
+{
+    console.log(scrollY);
+    console.log(heightFooter);
+
+    if(scrollY >= heightFooter)
+    {
+        $('footer').css({
+            'bottom' : '0px'
+        });
+    }
+    else
+    {
+        $('footer').css({
+            'bottom' : '-' + heightFooter + 'px'
+        });
+    }
+}
+
+$(window).load(function(){
+    var windowHeight        = $(window).height(),
+        footerHeight        = $('footer').height(),
+        heightDocument      = (windowHeight) + ($('.content').height()) + ($('footer').height()) - 20;
+
+    // Definindo o tamanho do elemento pra animar
+    $('#scroll-animate, #scroll-animate-main').css({
+        'height' :  heightDocument + 'px'
+    });
+
+    // Definindo o tamanho dos elementos header e conteúdo
+    $('header').css({
+        'height' : windowHeight + 'px',
+        'line-height' : windowHeight + 'px'
+    });
+
+    $('.wrapper-parallax').css({
+        'margin-top' : windowHeight + 'px'
+    });
+
+    scrollFooter(window.scrollY, footerHeight);
+
+    // ao dar rolagem
+    window.onscroll = function(){
+        var scroll = window.scrollY;
+
+        $('#scroll-animate-main').css({
+            'top' : '-' + scroll + 'px'
+        });
+        
+        $('header').css({
+            'background-position-y' : 50 - (scroll * 100 / heightDocument) + '%'
+        });
+
+        scrollFooter(scroll, footerHeight);
+    }
+});
+
+(function() {
+  var parallaxScroll;
+
+  parallaxScroll = (function(_this) {
+    return function() {
+      var currentScrollPosition;
+      currentScrollPosition = $(_this).scrollTop();
+      $('.opening').css({
+        'background-position': '50% ' + (-currentScrollPosition / 4) + 'px'
+      });
+      return $('.openingText').css({
+        'margin-top': (currentScrollPosition / 4) + "px",
+        'opacity': 1 - (currentScrollPosition / 250)
+      });
+    };
+  })(this);
+
+  $(document).ready((function(_this) {
+    return function() {
+      $(window).scroll(function() {
+        return parallaxScroll();
+      });
+      return $(document).scroll(function() {
+        var bottomOfOpening, compareWindowHeight, header, sideBar, windowHeight, windowTop;
+        windowTop = $(window).scrollTop();
+        bottomOfOpening = $('.opening').position().top + $('.opening').height();
+        header = $('.header');
+        sideBar = $('.sideBar');
+        windowHeight = $(window).height();
+        compareWindowHeight = (windowHeight - 70) + "px";
+        if (bottomOfOpening > windowTop) {
+          return header.css({
+            'position': 'absolute',
+            'top': '100%',
+            'left': '0'
+          });
+        } else {
+          return header.css({
+            'position': 'fixed',
+            'top': '0',
+            'left': '0'
+          });
+        }
+      });
+    };
+  })(this));
+
+}).call(this);

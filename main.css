@@ -1,10 +1,22 @@
 body {
-    background: url(images/soccer.jpg) no-repeat center center fixed; 
+    background: url(images/beach.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   font-family: 'Oswald', sans-serif;
+}
+
+#textbox{
+  width: 700px;
+  height: 450px;
+  background-color: black;
+  opacity: 0.6;
+  position:absolute;
+  top:25%;
+  left:24.5%;
+  text-align: center;
+
 }
 
 .all{
@@ -124,11 +136,11 @@ body {
   font-family: 'Titillium Web', sans-serif;
   font-weight: 700;
   text-decoration: none;
-  font-size: 3rem;
+  font-size: 7rem;
   line-height: 4.5rem;
-  color: tomato;
+  color: grey;
   background-color: transparent;
-  border: 5px solid tomato;
+  border: 5px solid black;
 }
 .btn-slice:after {
   content: '';
@@ -138,12 +150,12 @@ body {
   left: 50%;
   height: 100%;
   width: 0;
-  background-color: tomato;
+  background-color: black;
   -webkit-transition: width .5s, left .5s;
   transition: width .5s, left .5s;
 }
 .btn-slice:hover {
-  color: white;
+  color: grey;
 }
 .btn-slice:hover:after {
   top: 0;
@@ -155,7 +167,7 @@ body {
 
 @supports (-webkit-background-clip: text) {
   .btn-slice {
-    background-color: tomato;
+    background-color: grey;
     background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white));
     background-image: -webkit-linear-gradient(white, white);
     background-image: linear-gradient(white, white);
@@ -213,11 +225,11 @@ body {
   transform: translateZ(0);
 }
 .btn-edge:hover {
-  color: tomato;
+  color: grey;
   -webkit-background-size: 100% 5px, 100% 5px, 100% 5px, 100% 5px, 5px 100%, 5px 100%, 5px 100%, 5px 100%;
   background-size: 100% 5px, 100% 5px, 100% 5px, 100% 5px, 5px 100%, 5px 100%, 5px 100%, 5px 100%;
-  -webkit-box-shadow: inset 0 0 0 5px tomato;
-  box-shadow: inset 0 0 0 5px tomato;
+  -webkit-box-shadow: inset 0 0 0 5px grey;
+  box-shadow: inset 0 0 0 5px grey;
   -webkit-transition: background-size 1s,  -webkit-box-shadow .4s .6s,  color .4s .6s;
   transition: background-size 1s,  box-shadow .4s .6s,  color .4s .6s;
 }
@@ -245,10 +257,10 @@ body {
   text-decoration: none;
   font-size: 3rem;
   color: transparent;
-  border: 5px solid tomato;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(tomato), to(tomato));
-  background-image: -webkit-linear-gradient(tomato, tomato);
-  background-image: linear-gradient(tomato, tomato);
+  border: 5px solid grey;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(grey), to(grey));
+  background-image: -webkit-linear-gradient(grey, grey);
+  background-image: linear-gradient(grey, grey);
   background-repeat: no-repeat;
   background-position: 0 100%;
   -webkit-background-size: 100% 0;
@@ -265,7 +277,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  color: tomato;
+  color: grey;
 }
 .btn-loop:hover {
   -webkit-background-size: 100% 100%;
@@ -287,7 +299,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: tomato;
+    background-color: grey;
     background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white));
     background-image: -webkit-linear-gradient(white, white);
     background-image: linear-gradient(white, white);
@@ -381,21 +393,21 @@ body {
 .btn-line:before {
   right: 0;
   top: 0;
-  border-top: 5px solid tomato;
-  border-left: 5px solid tomato;
+  border-top: 5px solid grey;
+  border-left: 5px solid grey;
   -webkit-transition: opacity 0 .4s, width .2s .2s, height .2s;
   transition: opacity 0 .4s, width .2s .2s, height .2s;
 }
 .btn-line:after {
   left: 0;
   bottom: 0;
-  border-bottom: 5px solid tomato;
-  border-right: 5px solid tomato;
+  border-bottom: 5px solid grey;
+  border-right: 5px solid grey;
   -webkit-transition: opacity .05s .7s, width .2s .6s, height .2s .4s;
   transition: opacity .05s .7s, width .2s .6s, height .2s .4s;
 }
 .btn-line:hover {
-  color: tomato;
+  color: grey;
   -webkit-transition: color .2s .8s;
   transition: color .2s .8s;
 }
@@ -697,3 +709,249 @@ a {
   color: #333;
   text-decoration: none;
 }
+
+#btn1{
+
+}
+
+#scroll-animate
+{
+  overflow: hidden;
+}
+
+#scroll-animate-main
+{
+  width: 100%;
+  left: 0;
+  position: fixed;
+}
+
+#heightPage,
+#heightScroll
+{
+  width: 10px;
+  top: 0;
+  position: absolute;
+  z-index: 99;
+}
+
+#heightPage
+{
+  left: 0;
+}
+
+#heightScroll
+{
+  right: 0;
+}
+
+header
+{
+  width: 100%;
+  height: 100%;
+  background: url(http://www.hudsonmarinho.com/lab/header-and-footer-parallax-effect/bg-header.jpg) no-repeat 50% 50%;
+  top: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+footer
+{
+  width: 100%;
+  height: 300px;
+  background: gray;
+  bottom: -300px;
+  position: fixed;
+  z-index: -1;
+}
+
+.content
+{
+  height: 1000px;
+  min-height: 1000px;
+  background: #ededed;
+  position: relative;
+  z-index: 1;
+}
+
+.wrapper-parallax {
+  margin-top: 100%;
+  margin-bottom: 300px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 150px;
+  color: #fff;
+}
+
+header h1{}
+
+.content h1{
+  line-height: 1000px;
+  color: #999;
+}
+
+footer h1
+{
+  line-height: 300px;
+}
+
+header,
+footer,
+#scroll-animate-main
+{
+  -webkit-transition-property: all;
+     -moz-transition-property: all;
+      transition-property: all;
+
+  -webkit-transition-duration: 0.4s;
+     -moz-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0, 1);
+     -moz-transition-timing-function: cubic-bezier(0, 0, 0, 1);
+      transition-timing-function: cubic-bezier(0, 0, 0, 1);
+}
+
+@import url("http://fonts.googleapis.com/css?family=Gentium+Basic|Open+Sans:700italic,800");
+body {
+  background: #e84d5b;
+}
+.container {
+  width: 460px;
+  margin: 20px auto;
+}
+h1 {
+  font-family: 'Open Sans';
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+  font-size: 2em;
+}
+h1 .large {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 1.2em;
+}
+p {
+  line-height: 1.8em;
+  text-align: justify;
+  font-family: 'Gentium Basic';
+}
+a {
+  color: rgba(255,255,255,0.3);
+  text-decoration: none;
+}
+a:hover {
+  color: #fff;
+}
+h2.pinline {
+  text-align: center;
+  display: block;
+  overflow: hidden;
+  font-size: 1em;
+  font-weight: 100;
+  margin: 20px 0;
+  font-family: 'Open Sans';
+  font-weight: 700;
+  text-transform: uppercase;
+}
+h2.pinline span {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+h2.pinline span:before,
+h2.pinline span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  background: #000;
+  width: 99999px;
+}
+h2.pinline span:before {
+  left: 100%;
+  margin-left: 20px;
+}
+h2.pinline span:after {
+  right: 100%;
+  margin-right: 20px;
+}
+
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700");
+html {
+  height: 100%;
+}
+html body {
+  background: #f5f7fa;
+  font: 400 1.5em/1.5 "Lato", Helvetica, Arial, serif;
+  color: #f5f7fa;
+  text-align: center;
+  height: 100%;
+}
+html body div.opening {
+  background: url("http://25.media.tumblr.com/10619b725837ad67344b37ec9bcc5f56/tumblr_mubkjfBSzD1s1ujkmo2_1280.jpg") no-repeat 50% 0 fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+html body div.opening .openingText {
+  width: 300px;
+  height: 150px;
+  position: fixed;
+  top: 10%;
+  left: 34%;
+  
+  
+}
+html body div.opening .openingText h1 {
+  line-height: 130px;
+  font-size: 50px;
+}
+
+html body div.firstArticle {
+  text-align: justify;
+  position: absolute;
+  margin: 0 auto;
+  color: #434a54;
+background: url(images/train.jpg) no-repeat 50% 0 fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  
+}
+html body div.firstArticle h2 {
+  
+  text-align: center;
+  color: white;
+  font-family: 'Gentium Basic';
+  padding-top: 5%;
+
+}
+html body div.firstArticle p {
+  color: #434a54;
+  font-size: 14px;
+  line-height: 1.8;
+  padding: 5px 15px;
+  
+}
+/*#content { max-width: 28em; text-align: justify; margin: 0 auto; padding: 2em; }
+
+#content p { margin: 0 0 2em; }
+*/
