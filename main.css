@@ -1,4 +1,4 @@
-body {
+#body {
     background: url(images/beach.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -124,7 +124,7 @@ body {
   box-sizing: border-box;
 }
 
-body {
+#body {
  
   text-align: center;
 }
@@ -197,7 +197,7 @@ body {
   box-sizing: border-box;
 }
 
-body {
+#body {
   text-align: center;
 }
 
@@ -243,7 +243,7 @@ body {
   box-sizing: border-box;
 }
 
-body {
+#body {
   
   text-align: center;
 }
@@ -362,7 +362,7 @@ body {
   box-sizing: border-box;
 }
 
-body {
+#body {
   text-align: center;
 
 }
@@ -564,7 +564,7 @@ body {
 }
 
 @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-body {
+#body {
   width: 100%;
   
 }
@@ -842,6 +842,7 @@ h1 .large {
   text-transform: uppercase;
   font-style: normal;
   font-size: 1.2em;
+  color: white;
 }
 p {
   line-height: 1.8em;
@@ -955,3 +956,4 @@ html body div.firstArticle p {
 
 #content p { margin: 0 0 2em; }
 */
+
