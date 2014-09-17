@@ -957,3 +957,29 @@ html body div.firstArticle p {
 #content p { margin: 0 0 2em; }
 */
 
+@media screen and (max-width:959px){
+    body{
+      width:100%;
+    }
+    .container{
+      width:100%;
+    }
+}
+
+@media screen and (max-width:640px){
+    #body{
+      width:100%;
+    }
+    .container{
+      width:100%;
+    }
+}
+
+@media screen and (max-width:320px){
+    #body{
+      width:100%;
+    }
+    .container{
+      width:100%;
+    }
+}
