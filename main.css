@@ -843,10 +843,11 @@ h1 .large {
   font-style: normal;
   font-size: 1.2em;
   color: white;
+  text-align: center;
 }
 p {
   line-height: 1.8em;
-  text-align: justify;
+  text-align: center;
   font-family: 'Gentium Basic';
 }
 a {
@@ -977,9 +978,85 @@ html body div.firstArticle p {
 
 @media screen and (max-width:320px){
     #body{
-      width:100%;
+      width:320px;
     }
     .container{
-      width:100%;
+      width:320px;
     }
+}
+
+.center{
+text-align: center;
+}
+
+/* http://demos.uilang.com/hamburger-menu/style.css */
+a {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  padding: 11px 0 0 9px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,40,60,.2);
+  tap-highlight-color: transparent;
+}
+span {
+  display: block;
+  width: 16px;
+  height: 2px;
+  background: rgb(0,40,60);
+  -webkit-transition: .7s;
+          transition: .7s;
+  pointer-events: none;
+}
+span:nth-child(2) {
+  margin: 3px 0;
+}
+.open {
+  border-color: rgba(255,255,255,.2);
+}
+.open span {
+  background: #fff;
+}
+.open :first-child {
+  -webkit-transform: translateY(5px) rotate(-45deg);
+      -ms-transform: translateY(5px) rotate(-45deg);
+          transform: translateY(5px) rotate(-45deg);
+}
+.open :nth-child(2) {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  opacity: 0;
+}
+.open :last-child {
+  -webkit-transform: translateY(-5px) rotate(-135deg);
+      -ms-transform: translateY(-5px) rotate(-135deg);
+          transform: translateY(-5px) rotate(-135deg);
+}
+nav {
+  position: absolute;
+  width: 200px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: rgb(0,40,60);
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: .5s;
+          transition: .5s;
+}
+.open + nav {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+code {
+  color: transparent;
+  font-size: 0;
 }
