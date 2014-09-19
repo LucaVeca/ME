@@ -303,3 +303,88 @@ document.addEventListener("DOMContentLoaded", function() {
   })
 })
 
+$(document).ready(function() {
+  //get and set section height to window height
+  var sectionHeight = $(window).height();
+  $('section').css('height', sectionHeight);
+  
+  // reset section heights to 100% on resize
+  $(window).resize(function() {
+    var sectionHeight = $(window).height();
+    $('section').css('height', sectionHeight);
+  });
+  
+  // set first dot and section to #current or .onScreen
+  $('nav ul li:first-child a').attr('id','current');
+  $('body section:first-of-type').attr('class','onScreen');
+  
+  // set clicked dot on right to #current
+  $('nav a').click(function() {
+    $('nav a').removeAttr('id');
+    $(this).attr('id','current');
+  });
+  
+  /* reveal section titles on dot hover
+  $('nav ul li').mouseenter(function() {
+    $(this).children('span').css({
+      'marginLeft':'-105px',
+      'opacity':'1.0'
+    });
+    $(this).on('mouseleave', function() { 
+      $(this).children('span').css({
+        'marginLeft':'-120px',
+        'opacity':'0'
+      });
+    });
+  });*/
+  
+  // scrollTo easing from http://www.learningjquery.com/2007/10/improved-animated-scrolling-script-for-same-page-links/ via css-tricks.com
+  $(function() {
+    $('nav a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top - 61
+          }, 333);
+          return false;
+        }
+      }
+    });
+  });
+  
+  // sticky header
+    $(window).on('scroll', function() {
+      var scrollDist = $('body').scrollTop(); 
+      if (scrollDist > 444) {
+        $('header').addClass('sticky');
+      } else {
+        $('header').removeClass();
+      }
+    });
+  
+  // activate dots when the corresponding section is scrolled into view
+    $(window).on('scroll', function() { 
+      var onScreen = '';
+      $('nav a').removeAttr('id'); 
+      $('section').removeAttr('class');
+      $('section').each(function() {
+        var vpHeight = $(window).innerHeight(),
+            vpThreshhold = vpHeight / 3,
+            scrollDist = $('body').scrollTop(),            
+            positionY = $(this).position().top,
+            sectionHeight = $(this).outerHeight(),
+            sectionOffsetBottom = positionY + sectionHeight;
+        if (positionY - scrollDist <= vpThreshhold && positionY - scrollDist >= 0) {
+          var onScreen = $(this).children('h1').attr('id');
+          $('nav ul li:nth-child(' + onScreen + ') > a').attr('id','current');
+          //  console.log(onScreen);
+          $('body section:nth-of-type(' + onScreen + ')').attr('class','onScreen');
+           // console.log(onScreen);
+        }
+      });     
+    });
+  
+  
+});
