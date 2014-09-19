@@ -1260,3 +1260,7 @@ body {
   background-image: url("http://benhodgson.net/codepen/social/soundcloud-128.png");
 }
 
+.icon-github a {
+  background-color: #4183c4;
+  background-image: url("http://benhodgson.net/codepen/social/github-128.png");
+}
