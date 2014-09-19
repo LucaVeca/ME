@@ -1255,4 +1255,8 @@ body {
   background-image: url("http://benhodgson.net/codepen/social/instagram-128.png");
 }
 
+.icon-soundcloud a {
+  background-color: #f60;
+  background-image: url("http://benhodgson.net/codepen/social/soundcloud-128.png");
+}
 
