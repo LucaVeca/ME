@@ -1155,3 +1155,94 @@ p span {
   }
 }
 
+body {
+  font-family: sans-serif;
+}
+
+.social-icons {
+  
+  margin: 0 0.5%;
+}
+.social-icons li {
+  float: left;
+  position: relative;
+  width: 9%;
+  height: 0;
+  margin: 1% 0.5%;
+  padding-bottom: 9%;
+}
+.social-icons:last-of-type {
+  margin-right: 0;
+}
+
+.social-icon a {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 70%;
+  height: 70%;
+  border: 0;
+  background-color: #fff;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-decoration: none;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -moz-border-radius: 10%;
+  -webkit-border-radius: 10%;
+  border-radius: 10%;
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.social-icon a:hover {
+  background-color: #222;
+  background-size: 0%;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.social-icon a:hover .social-name {
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  -webkit-filter: blur(0);
+  filter: blur(0);
+}
+
+.social-name {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -7px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-filter: blur(25px);
+  filter: blur(25px);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.icon-facebook a {
+  background-color: #3b5998;
+  background-image: url("http://benhodgson.net/codepen/social/facebook-128.png");
+}
+
+.
