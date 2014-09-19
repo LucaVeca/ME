@@ -1245,4 +1245,8 @@ body {
   background-image: url("http://benhodgson.net/codepen/social/facebook-128.png");
 }
 
-.
+.icon-twitter a {
+  background-color: #00aced;
+  background-image: url("http://benhodgson.net/codepen/social/twitter-128.png");
+}
+
