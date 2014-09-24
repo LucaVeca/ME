@@ -5,61 +5,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 	<link  type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link type="text/css" rel="stylesheet"  href="main.css">
 	<title></title>
 	<!--<div id="textbox" align="center">
 	-->
 <style> html, body, a, a:hover { cursor:url('http://www.snazzyspace.com/cursorsfolder/justin-bieber-face.png'), auto !important; }</style>
 <link href="//fonts.googleapis.com/css?family=Lato:100,700" rel="stylesheet" type="text/css" />
 
-<nav>
-  
-  <input id="nav" type="checkbox" />
-  
-  <label for="nav">
-    <strong ></strong>
-    <b><i></i><i></i><i></i></b>
-  </label>
-  
-  <menu>
-
-    <li><a href="#">ABOUT ME</a></li>
-    <li><a href="#">GUITAR</a></li>
-    <li><a href="#">SOCCER</a></li>
-    <li><a href="#">PROJECTS</a></li>
-  </menu>
-  
-</nav>
 
 <!-- Icons: http://simpleicons.org/ -->
 
-<ul class="social-icons">
-  <li class="social-icon icon-facebook">
-    <a href="#">
-      <span class="social-name">Facebook</span>
-    </a>
-  </li>
-  <li class="social-icon icon-twitter">
-    <a href="#">
-      <span class="social-name">Twitter</span>
-    </a>
-  </li>
-  <li class="social-icon icon-instagram">
-    <a href="#">
-      <span class="social-name">Instagram</span>
-    </a>
-  </li>
-  <li class="social-icon icon-soundcloud">
-    <a href="#">
-      <span class="social-name">Soundcloud</span>
-    </a>
-  </li>
-  <li class="social-icon icon-github">
-    <a href="#">
-      <span class="social-name">GitHub</span>
-    </a>
-  </li>
-</ul>
+<?php
+// echos the current page URL, http:// only.  Do not use for https://
+function getUrl() {
+  $curr_url  = 'http://'.$_SERVER["SERVER_NAME"];
+  $curr_url .= $_SERVER["REQUEST_URI"];
+  echo $curr_url;
+}
+?>
+<div id="no-js-socials">
+  <div class="social-mod">
+    <span>Share!</span>
+    <a class="social facebook" target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=URL-TO-THE-PAGE">Facebook</a> 
+    <a class="social twitter" target="_blank" href="https://twitter.com/intent/tweet?url=URL-TO-THE-PAGE">Twitter</a> 
+    <a class="social google" target="_blank" href="https://plus.google.com/share?url=URL-TO-THE-PAGE">Google Plus</a>
+  </div><!--/.social-mod-->
+</div><!--/#no-js-socials-->
 <div class="opening">
   <div class="openingText">
     <div class="center">
@@ -81,15 +52,10 @@
   <div class="firstArticle">
     <p id="p2">
   <span>
-    Guitar
+    New York
   </span>
   &mdash;It takes one great rockshow to change the world &mdash;
 </p>
-    <audio controls>
-  <source src="Milky Chance - Stolen Dance (Album Version).mp3" type="audio/mpeg">
-</audio>
-
-
 	<div>
 	<!--<a class="btn-edge" href="#openModal">GUITAR</a>
 <div id="openModal" class="modalbg">
@@ -125,27 +91,36 @@
 </head>-->
 <body>
 
-	<!--<audio controls>
+    
+<div class="team-slider" id="team-slider">
+
+            <div class="slider-container">
+                <ul class="slider" data-slide="1"> 
+                    <li class="slides" data-id="1" ><img src="images/carouselimg.jpg"></li>
+                    <li class="slides" data-id="2" ><img src="images/carouselimg2.jpg" alt="An image"></li>
+                    <li class="slides" data-id="3" ><img src="http://magdeleine.co/wp-content/uploads/2014/09/51H-1400x933.jpg" alt="An image"></li>
+                </ul>
+            </div>
+
+            <div class="slider-controls">
+                <a href="#3" class="control-left"><span></span></a>
+                <a href="#2" class="control-right"><span></span></a>
+            </div>
+ 
+            <div class="slider-bullets">
+                <ul>
+                    <li class="bullet active"><a href="#1" id="bullet-1"></a></li>
+                    <li class="bullet"><a href="#2" id="bullet-2"></a></li>
+                    <li class="bullet"><a href="#3" id="bullet-3"></a></li>
+                </ul>
+            </div> 
+	 <p><audio controls>
   <source src="Milky Chance - Stolen Dance (Album Version).mp3" type="audio/mpeg">
 </audio>
 
-<div class="carousel right">
-  <div class="indicator"></div>
-  <div class="wrap">
-    <ul>
-      <li><img src="Images/512x.jpg"/></li>
-      <li><img src="Images/Gibson.jpg"/></li>
-      <li><img src="Images/Gibson2.jpg"/></li>
-      <li><img src="Images/juve.jpg"/></li>
-      
-    </ul>
-  </div>
-</div>-->
-
 </div>
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
-	<script type="text/javascript" href="js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="main.js"></script>
 
 </body>

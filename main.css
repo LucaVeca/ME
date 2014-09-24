@@ -1,4 +1,4 @@
-#body {
+body {
     background: url(images/beach.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -961,28 +961,46 @@ html body div.firstArticle p {
 */
 
 @media screen and (max-width:959px){
-    body{
+    html{
       width:100%;
     }
     .container{
       width:100%;
+    }
+    .content{
+      width:320px;
+    }
+    .opening{
+      width:320px;
     }
 }
 
 @media screen and (max-width:640px){
-    #body{
+    html{
       width:100%;
     }
     .container{
       width:100%;
+    }
+    .content{
+      width:320px;
+    }
+    .opening{
+      width:320px;
     }
 }
 
 @media screen and (max-width:320px){
-    #body{
+    html{
       width:320px;
     }
     .container{
+      width:320px;
+    }
+    .content{
+      width:320px;
+    }
+    .opening{
       width:320px;
     }
 }
@@ -1159,108 +1177,289 @@ body {
   font-family: sans-serif;
 }
 
-.social-icons {
+
+
+html, body {
   
-  margin: 0 0.5%;
 }
-.social-icons li {
+
+.team-slider {
+  width: 450px;
+  margin: 25em auto;
+}
+.team-slider .slider-container {
+  width: 420px;
+  overflow: hidden;
+  margin: 2em auto;
+}
+.team-slider .slider-container ul.slider {
+  width: 1260px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-transition: margin .3s ease;
+          transition: margin .3s ease;
+}
+.team-slider .slider-container ul.slider li.slides {
+  margin: 0;
+  padding: 0;
   float: left;
-  position: relative;
-  width: 9%;
-  height: 0;
-  padding-bottom: 9%;
+  width: 420px;
 }
-.social-icons:last-of-type {
-  
-}
-
-.social-icon a {
+.team-slider .slider-container ul.slider li.slides img {
+  max-width: 420px;
   display: block;
-  position: absolute;
-
-  width: 40%;
-  height: 40%;
-  border: 0;
-  background-color: #fff;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  text-decoration: none;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  -moz-border-radius: 10%;
-  -webkit-border-radius: 10%;
-  border-radius: 10%;
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
 }
-.social-icon a:hover {
-  background-color: #222;
-  background-size: 0%;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+.team-slider .slider-controls .control-left {
+  float: left;
+  margin-left: -45px;
 }
-.social-icon a:hover .social-name {
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-  opacity: 1;
-  -webkit-filter: blur(0);
-  filter: blur(0);
+.team-slider .slider-controls .control-right {
+  float: right;
+  margin-right: -45px;
 }
-
-.social-name {
-  position: absolute;
-  top: 50%;
+.team-slider .slider-controls a {
+  display: block;
+}
+.team-slider .slider-controls a span {
+  width: 16px;
+  height: 16px;
+  display: block;
+  margin: -194px 12px 0;
+  background: #FF4719;
+  border-radius: 100%;
+}
+.team-slider .slider-controls a:active span {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-animation: drop .3s linear;
+          animation: drop .3s linear;
+  box-shadow: 0 0 0 4px white, 0 0 0 5px rgba(0, 126, 229, 0.3);
+}
+.team-slider .slider-bullets ul {
+  list-style: none;
+  width: 103px;
+  height: 16px;
+  display: block;
+  margin: 20px auto 55px;
+  padding: 0;
+}
+.team-slider .slider-bullets ul li {
+  width: 16px;
+  height: 16px;
+  display: block;
+  float: left;
+  margin: 0 12px;
+  background: #FF4719;
+  border-radius: 100%;
+}
+.team-slider .slider-bullets ul li:active {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-animation: drop .3s ease;
+          animation: drop .3s ease;
+  box-shadow: 0 0 0 4px white, 0 0 0 5px rgba(0, 126, 229, 0.3);
+}
+.team-slider .slider-bullets ul li:nth-child(1) {
+  margin-left: 0;
+}
+.team-slider .slider-bullets ul li:nth-child(3) {
+  margin-right: 0;
+}
+.team-slider .slider-bullets ul li.active {
+  background: white;
+}
+.team-slider .slider-bullets ul li a {
   width: 100%;
-  margin-top: -7px;
-  color: #fff;
-  font-size: 14px;
+  height: 100%;
+  display: block;
+}
+
+@-webkit-keyframes drop {
+  0% {
+    box-shadow: 0 0 0 white;
+  }
+  80% {
+    box-shadow: 0 0 0 4px white, 0 0 0 5px rgba(0, 126, 229, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 4px white, 0 0 0 5px rgba(0, 126, 229, 0.3);
+  }
+}
+
+@keyframes drop {
+  0% {
+    box-shadow: 0 0 0 white;
+  }
+  80% {
+    box-shadow: 0 0 0 4px white, 0 0 0 5px rgba(0, 126, 229, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 4px white, 0 0 0 5px rgba(0, 126, 229, 0.3);
+  }
+}
+header {
+  width: 100%;
+  height: 100px;
+  float: left;
+  padding: 2em 0;
+}
+header .title, header p {
   text-align: center;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  -webkit-filter: blur(25px);
-  filter: blur(25px);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  color: #007EE5;
+  line-height: 24px;
+}
+header .title {
+  margin-bottom: .5em;
+}
+header p {
+  color: #8899A7;
 }
 
-.icon-facebook a {
-  background-color: #3b5998;
-  background-image: url("http://benhodgson.net/codepen/social/facebook-128.png");
+body {
+  margin: 0;
+  padding: 0;
+  font: 16px/1.4 "Segoe UI", Tahoma, Helvetica, Sans-Serif;
+}
+#page {
+  margin-top: 3.5em;
+  min-height: 100px;
+}
+#page #top,
+#page #about,
+#page #services,
+#page #contact {
+  padding: 0.2em 1em;
+  min-height: 450px;
+  border-top: 1px dashed #666;
+}
+#page #top h2,
+#page #about h2,
+#page #services h2,
+#page #contact h2 {
+  padding: 0.3em 0;
+  line-height: 1.1em;
+  margin: 0;
+  text-align: center;
+}
+#page #top {
+  background: #ddd;
+}
+#page #about {
+  background: #ccc;
+}
+#page #services {
+  background: #bbb;
+}
+#page #contact {
+  background: #aaa;
+}
+nav,
+div.nav {
+  position: fixed;
+  z-index: 1024;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+nav ul,
+div.nav ul {
+  background: black;
+  text-align: center;
+  padding: 0.5em;
+}
+nav ul li,
+div.nav ul li {
+  list-style: none;
+  display: inline-block;
+}
+nav ul li a,
+div.nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5em;
+  box-sizing: border-box;
+}
+nav ul li a:hover,
+div.nav ul li a:hover {
+  background-color: lightGrey;
+  color: #333;
+  transition: all 0.2s;
+  border-bottom: 0.1em solid black;
+}
+nav ul li.active a,
+div.nav ul li.active a {
+  background-color: #222;
+  border-bottom: 0.1em solid #222;
+  transition: all 0.2s;
+}
+nav ul li.active a:hover,
+div.nav ul li.active a:hover {
+  background-color: lightGrey;
+  color: #333;
+  transition: all 0.2s;
+  border-bottom: 0.1em solid black;
 }
 
-.icon-twitter a {
-  background-color: #00aced;
-  background-image: url("http://benhodgson.net/codepen/social/twitter-128.png");
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.list-inline li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-bottom: 10px;
+}
+/*---- Genral classes end -------*/
+/*Change icons size here*/
+#no-js-socials {
+    width:50px;
+    margin:0;
+    padding:0;
+    position:fixed;
+    right:0;
+    top:50px;
 }
 
-.icon-instagram a {
-  background-color: #5c3d2e;
-  background-image: url("http://benhodgson.net/codepen/social/instagram-128.png");
+#no-js-socials .social-mod {
+    background: #eee;
+    border:solid 1px #ddd;
+    border-right:none;
+    border-radius: 5px 0 0 5px;
+    padding:5px;
+    text-align:center;
 }
 
-.icon-soundcloud a {
-  background-color: #f60;
-  background-image: url("http://benhodgson.net/codepen/social/soundcloud-128.png");
+#no-js-socials span {
+    font-size:12px;   
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-.icon-github a {
-  background-color: #4183c4;
-  background-image: url("http://benhodgson.net/codepen/social/github-128.png");
+#no-js-socials .social {
+    display:inline-block;
+    width:32px;
+    height:32px;
+    text-indent:-999em;
+    margin:5px 0 0 0;
+    background: url("http://www.silversuperstore.com/site-assets/2013-social-icons.png") no-repeat left top;
 }
 
+#no-js-socials .facebook {
+    background-position: 0 0;
+}
+
+#no-js-socials .twitter {
+    background-position: 0 -32px;
+}
+
+#no-js-socials .google {
+    background-position: 0 -64px;;
+}
